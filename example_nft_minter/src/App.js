@@ -65,10 +65,10 @@ function App() {
     blockchain.smartContract.methods
       .mint(blockchain.account, _amount)
       .send({
-        gasLimit: "285000",
+        gasLimit: "300000",
         to: "",
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((100 * _amount).toString(), "ether"),
+        value: blockchain.web3.utils.toWei((40 * _amount).toString(), "ether"),
       })
       .once("error", (err) => {
         console.log(err);
@@ -130,7 +130,7 @@ function App() {
                   You can still find Ethime on{" "}
                   <a
                     target={"_blank"}
-                    href={"https://opensea.io/collection/"}
+                    href={"https://opensea.io/collection/0xaeF9598218422d7EF8288F891575FFaEcDDf3186"}
                   >
                     Opensea.io
                   </a>
@@ -139,7 +139,7 @@ function App() {
             ) : (
               <>
                 <s.TextTitle style={{ textAlign: "center" }}>
-                  1 EME costs 60 MATIC.
+                  1 EME costs 40 MATIC.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription style={{ textAlign: "center" }}>
@@ -151,7 +151,7 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerMedium />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription style={{ textAlign: "center" }}>
                       Connect to the Polygon network
@@ -202,7 +202,7 @@ function App() {
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextDescription style={{ textAlign: "center", fontSize: 9 }}>
-            We have set the gas limit to 285000 for the contract to successfully
+            We have set the gas limit to 300000 for the contract to successfully
             mint your NFT. We recommend that you don't change the gas limit.
           </s.TextDescription>
         </s.Container>
