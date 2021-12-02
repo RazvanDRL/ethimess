@@ -130,7 +130,7 @@ function App() {
                   You can still find Ethime on{" "}
                   <a
                     target={"_blank"}
-                    href={"https://opensea.io/collection/0xaeF9598218422d7EF8288F891575FFaEcDDf3186"}
+                    href={"https://opensea.io/collection/0x4ff356521f2722EC6A1a2fccb65AF0Bf7b936D36"}
                   >
                     Opensea.io
                   </a>
